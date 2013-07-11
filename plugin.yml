@@ -1,0 +1,86 @@
+#Copyright 2013 William Reed
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+name: MTCPotions
+main: io.github.wreed12345.MTCPotions
+version: 1.0.0
+commands:
+    potion:
+        description: Gives you a certain type of potion for a designated amount of time
+        #usage: "Usage: /potion {potion type} {length of its effect in seconds}"
+        #commented out to prevent from showing during unnesecary locations. added manually
+    potionlist:
+        description: Lists possible potions
+        usage: "Simply type '/potionlist'"
+permissions:
+    potions.*:
+        description: Gives access to all potion commands
+        children:
+            potions.use.fireresistance: true
+            potions.use.invisibility: true
+            potions.use.nightvision: true
+            potions.use.regeneration: true
+            potions.use.strength: true
+            potions.use.swiftness: true
+            potions.use.jump: true
+            potions.use.haste: true
+            potions.use.scuba: true
+            potions.use: true
+    potions.use.fireresistance:
+        description: Allows you to use fire resistance potions
+        default: op
+        children:
+            potions.use: true
+    potions.use.invisibility:
+        description: Allows you to use invisibility potions
+        default: op
+        children:
+            potions.use: true
+    potions.use.nightvision:
+        description: Allows you to use night vision potions
+        default: op
+        children:
+            potions.use: true
+    potions.use.regeneration:
+        description: Allows you to use regeneration potions
+        default: op
+        children:
+            potions.use: true
+    potions.use.strength:
+        description: Allows you to use strength potions
+        default: op
+        children:
+            potions.use: true
+    potions.use.swiftness:
+        description: Allows you to use swiftness potions
+        default: op
+        children:
+            potions.use: true
+    potions.use.jump:
+        description: Allows you to use jump potions
+        default: op 
+        children:
+            potions.use: true
+    potions.use.haste:
+        description: Allows you to use haste potions
+        default: op
+        children:
+            potions.use: true
+    potions.use.scuba:
+        description: Allows you to use scuba potions
+        default: op
+        children:
+            potions.use: true
+    potions.use:
+        description: Allows use of any of the previous nodes
+        default: op
