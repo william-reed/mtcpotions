@@ -48,3 +48,6 @@ Bukkit plugin for using designated potions for a certain interval of time
   - Config file 
   - Allow ediitng of cooldown time
   - Allow editing of max potion time
+
+<b>Original Bukkit Dev Link </b>
+https://dev.bukkit.org/projects/mtcpotions
